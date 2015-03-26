@@ -1,0 +1,64 @@
+{
+  "name": "azk-parser",
+  "version": "0.0.1",
+  "description": "azk-parser",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp",
+    "patch": "npm test && npm version patch && npm publish && git push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azukiapp/azk-parser.git"
+  },
+  "bin": {
+    "azk-parser": "./bin/azk-parser.js"
+  },
+  "keywords": [
+    "azk"
+  ],
+  "license": "Apache License",
+  "bugs": {
+    "url": "https://github.com/azukiapp/azk-parser/issues"
+  },
+  "homepage": "https://github.com/azukiapp/azk-parser",
+  "dependencies": {
+    "azk-core": "^1.0.15",
+    "colors": "^1.0.3",
+    "crypto": "0.0.3",
+    "fs-extra": "^0.16.5",
+    "fscache": "git+https://github.com/nuxlli/fscache",
+    "gaia-tsort": "^0.1.0",
+    "handlebars": "2.0.0-alpha.4",
+    "lodash": "^3.5.0",
+    "mkdirp": "^0.5.0",
+    "nopt": "^3.0.1",
+    "parentpath": "^0.2.0",
+    "printf": "^0.2.1",
+    "q": "^1.2.0",
+    "q-io": "^1.12.0",
+    "source-map-support": "^0.2.10",
+    "syntax-error": "^1.1.2",
+    "tmp": "0.0.25",
+    "touch": "0.0.3"
+  },
+  "devDependencies": {
+    "chai": "^2.1.2",
+    "babel": "^4.7.13",
+    "chai-as-promised": "^4.3.0",
+    "chai-things": "^0.2.0",
+    "gulp": "^3.8.11",
+    "gulp-babel": "^4.0.0",
+    "gulp-jscs": "^1.4.0",
+    "gulp-jshint": "^1.9.2",
+    "gulp-mocha": "^2.0.0",
+    "gulp-sourcemaps": "^1.5.0",
+    "jshint-stylish": "^1.0.1",
+    "rimraf": "^2.3.2",
+    "yargs": "^3.5.4"
+  },
+  "engineStrict": true,
+  "engines": {
+    "node": ">= 0.10"
+  }
+}

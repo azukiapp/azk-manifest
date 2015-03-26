@@ -1,0 +1,31 @@
+/**
+ * http://azk.io file
+ */
+
+// Global image to reuse
+imageAlias('base', { repository: "azukiapp/rails" });
+
+system("front", {
+  depends: [ "api" ],
+  image: { docker: "base" },
+  // Enable balancer over de instances
+  balancer: {
+    hostname: "myapp_<%= system.name %>",
+    alias: [
+      "front.<%= default_domain %>"
+    ],
+  },
+  // Enable sync current project folder to '/app' in containers
+  mount_folders: {
+    ".": "/app",
+  },
+  // Active a persistent data folder in '/data' in containers
+  data_folder: true,
+  command: "rails -s mongrel",
+  envs: {
+    RAILS_VERSION: "3.2.0"
+  },
+});
+
+setDefault("front");
+registerBin("rails-c", ["exec", "-i", "/bin/bash", "-c", "rails c"]);
