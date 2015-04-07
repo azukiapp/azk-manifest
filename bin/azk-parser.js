@@ -23,10 +23,10 @@ var shortHands =  {
                     'v' : ['--verbose'],
                   };
 
-             // everything is optional.
-             // knownOpts and shorthands default to {}
-             // arg list defaults to process.argv
-             // slice defaults to 2
+// everything is optional.
+// knownOpts and shorthands default to {}
+// arg list defaults to process.argv
+// slice defaults to 2
 var parsed_nopt = nopt(knownOpts, shortHands, process.argv, 2);
 
 if (parsed_nopt.help || parsed_nopt.argv.original.length === 0) {

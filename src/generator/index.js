@@ -1,5 +1,5 @@
-require('../config');
-import { _, config, path } from 'azk-core';
+var config = require('../config').get;
+import { _, path } from 'azk-core';
 // import { example_system } from 'azk/generator/rules';
 // import { UIProxy } from 'azk/cli/ui';
 // import { Court } from 'azk/generator/court';

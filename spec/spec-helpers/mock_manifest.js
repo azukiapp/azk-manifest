@@ -1,4 +1,6 @@
-import { path, _, config, async } from 'azk-core';
+var config = require('../../src/config').get;
+
+import { path, _, async } from 'azk-core';
 import { Generator } from '../../src/generator';
 import { Manifest } from  '../../src/manifest';
 
