@@ -1,12 +1,12 @@
-var config = require('../../src/config').get;
+var config = require('../../../src/config').get;
 
 import { path, _, async } from 'azk-core';
-import { Generator } from '../../src/generator';
-import { Manifest } from  '../../src/manifest';
+import { Generator } from '../../../src/generator';
+import { Manifest } from  '../../../src/manifest';
 
 var qfs = require('q-io/fs');
 
-export function extend(h) {
+export function installTo(h) {
 
   function socat(port) {
     return "socat TCP4-LISTEN:" + port + ",fork EXEC:`pwd`/src/bashttpd";

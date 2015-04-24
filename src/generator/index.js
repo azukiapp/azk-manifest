@@ -12,8 +12,8 @@ var template = path.join(
 );
 
 export class Generator {
-  constructor(ui) {
-    super(ui);
+  constructor(/*ui*/) {
+    // super(ui);
     // this.court = new Court(path.join(__dirname, "rules"), this);
   }
 
